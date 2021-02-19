@@ -1,0 +1,84 @@
+body{
+  background-image: url(background.jpg);
+  background-size: cover;
+  font-family: 'Jost', sans-serif;
+}
+
+/* riquadro semitrasparente*/
+.container{
+  text-align: center;
+  width: 1100px;
+  margin: 5% auto;
+  padding: 5%;
+  background-color:rgba(0, 0, 0, 0.5);
+  border-radius: 2%;
+}
+
+/* sezione header */
+header{
+  color: #00DD00;
+}
+header img{
+  width: 250px;
+}
+header h1{
+  margin:0;
+}
+
+/* barra nav*/
+nav{
+  background-color: #00DD00;
+  padding: 10px 0px;
+}
+
+/* nella sezione main viene sovrascrittà la proprietà ereditata text-align: center */
+main{
+  text-align: left;
+}
+
+/* proprietà generali della classe monopattino */
+main .monopattino{
+  padding: 18px 0px;
+  font-size: 21px;
+  color: white;
+}
+
+/* riduco gli spazi generati da h3 */
+main .monopattino > h3{
+  margin: 0px;
+}
+
+/* inserisce quadratino prima del testo */
+main .monopattino > h3::before{
+  content: "\2751";
+}
+
+/* manda a capo anche gli elementi inline  */
+main .monopattino > span{
+  display: block;
+}
+
+/* inserisce freccia prima del testo */
+ main .monopattino .devicePosition::before{
+  content: "\21A6";
+}
+
+/* caratteristiche base della chargeBar */
+main .monopattino .chargeBar{
+  height: 32px;
+  border-radius: 5px;
+}
+
+/* modifico solo colore e grandezza chargeBar */
+.monopattino .chargeBar.mediumEnergy{
+  background-color: orange;
+  width: 300px;
+}
+.monopattino .chargeBar.lowEnergy{
+  background-color: red;
+  width: 150px;
+}
+.monopattino .chargeBar.maxEnergy{
+  background-color: #00DD00;
+  width: 600px;
+}
